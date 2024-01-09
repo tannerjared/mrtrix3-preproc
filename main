@@ -10,7 +10,7 @@ set -e
 export SINGULARITYENV_OMP_NUM_THREADS=$OMP_NUM_THREADS
 
 # pass cuda91 path to singularity
-export SINGULARITYENV_CUDA91PATH=$CUDA91PATH
+#export SINGULARITYENV_CUDA91PATH=$CUDA91PATH
 
-time singularity exec -e --nv docker://brainlife/mrtrix3:3.0.2 ./mrtrix3_preproc.sh
+time singularity exec -e --nv docker://brainlife/mrtrix3:latest ./mrtrix3_preproc.sh
 
